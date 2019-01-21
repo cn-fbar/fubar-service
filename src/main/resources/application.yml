@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: fubar-service
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: ctrlspace
+    url: jdbc:mysql://localhost:3306/userdb
+    tomcat:
+      initial-size: 10
+      max-active: 50
+      min-idle: 5
+      max-idle: 5
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    database: mysql
+    hibernate:
+      ddl-auto: update
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: env,loggers,info,health
+#  data:
+#    rest:
+#      base-path: /api
+logging:
+  level:
+    root: info
+server:
+  port: 8081
